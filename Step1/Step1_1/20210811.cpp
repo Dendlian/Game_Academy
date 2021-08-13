@@ -98,6 +98,8 @@ int main ()
 		scanf("%[^\n]", MyItem[i].Name);
 
 		while (getchar() != '\n');
+		// getchar() : 버퍼에 저장되어 있는 문자를 맨앞부터 하나씩 반환
+
 		printf("%s\n", MyItem[i].Name);
 	}
 	return 0;

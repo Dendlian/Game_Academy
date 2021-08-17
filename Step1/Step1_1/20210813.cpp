@@ -9,8 +9,12 @@ int* const p2 = &num2;
 // 저장하는 주소 변경 X
 // 간접 참조를 이용한 값 변경 O
 
+const int* const p3;
+// 둘 다 불가능
+
  * 다중포인터
  // 포인터 변수의 주소를 저장하는 포인터
+
 */
 
 #include<stdio.h>

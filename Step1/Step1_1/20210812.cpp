@@ -21,9 +21,6 @@
 	printf("*p = %d\n", *p);
 	printf("p ¿« ¡÷º“ : %d\n", &p);
 
- *
-
-     
  */
 
 #include<stdio.h>

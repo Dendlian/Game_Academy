@@ -104,8 +104,8 @@ void initGame(PGameInfo gameInfo, GameLevel level)
         gameInfo->MaxRand_num = 100;
         break;
     case HIGH:
-        gameInfo->Life = 7;
-        gameInfo->MaxRand_num = 100;
+        gameInfo->Life = 9;
+        gameInfo->MaxRand_num = 500;
         break;
     }
     
@@ -126,7 +126,7 @@ GameLevel getGameLevel(const char* levelString, BOOL* outSucceeded)
     else if (strcmp(levelString, "MIDDLE") == 0)    gameLevel = MIDDLE;
     else if (strcmp(levelString, "HIGH") == 0)    gameLevel = HIGH;
 
-    // 만약 난이도가 LOW / MIDDLE / HIGH 가 아니란면
+    // 만약 난이도가 LOW / MIDDLE / HIGH 가 아니라면
     else (*outSucceeded) = FALSE;
   
     // 설정한 난이도 정보를 반환
@@ -217,8 +217,21 @@ int main()
 #pragma endregion
 
 #pragma region 난이도 설정
-        // 
+        // 난이도 설정 성공 여부를 나타낼 변수
+        BOOL succeeded;
 
+        // 난이도를 설정
+        GameLevel gameLevel = getGameLevel(inputLevel, &succeeded);
+
+        // 성공적으로 난이도가 설정되지 않았다면 다시 처음부터 진행
+        if (succeeded == FALSE) continue;
+#pragma endregion
+
+        // 게임 정보 초기화
+        initGame(&gameInfo, gameLevel);
+
+        // 게임 시작
+        startGame(&gameInfo);
     }
 
 	return 0;

@@ -34,7 +34,7 @@ void ShowItem(Pitem item)
 	printf("\n강화석 개수 : %d\n", item->F_Stone);
 	if (item->F_Level != 5)
 		printf("%d -> %d 강 성공 확률 : %d%%\n", item->F_Level, item->F_Level + 1, item->F_Percent);
-	else printf("강화 상채가 최대치입니다.\n");
+	else printf("강화 상태가 최대치입니다.\n");
 }
 
 void PlayGame(Pitem item)

@@ -93,4 +93,7 @@ int main()
 
     printArray(myArray, length);
 
+    free(myArray);
+    myArray = NULL;
+
 }

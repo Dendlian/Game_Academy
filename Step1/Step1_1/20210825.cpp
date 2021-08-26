@@ -58,6 +58,8 @@
  #pragma region
    - 확장 / 축소할 수 있는 코드블록을 생성
    - #pragma endregion으로 종료 여부를 설정
+
+   decltype에 대해 알아오시오
  */
 
 #include "Test.h"

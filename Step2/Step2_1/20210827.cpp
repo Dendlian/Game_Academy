@@ -30,48 +30,33 @@
 
  // 문자열
    - C++에서는 string을 이용하여 문자열 사용 가능
-
-*/
-
-#pragma warning(disable : 4996)
-#include<iostream>
-#include<string>
-using namespace std;
-
-inline int Plus(int a, int b) { return a + b; }
-__forceinline double Plus(double a, double b) { return a + b; }
-
-inline void printString(string str) { cout << str << endl; }
-
-int main()
-{
-	// string을 선언
+   // string을 선언
 	string string1 = "HELLO";
 	string1 = "HELLO WORLD!";
 	string string2("CAT");
 	cout << "string1 = " << string1 << endl;
 
-	// length() : NULL문자를 제외한 문자열의 길이를 반환
+ // length() : NULL문자를 제외한 문자열의 길이를 반환
 	for (int i = 0; i < string1.length(); i++)
 		cout << string1[i] << endl;
 
-	// capacity() : 문자열이 차지하고 있는 메모리 공간 크기를 반환
+ // capacity() : 문자열이 차지하고 있는 메모리 공간 크기를 반환
 	cout << "string1 size = " << string1.capacity() << endl;
 
-	// strcat() : 문자열을 잇는 힘수
+ // strcat() : 문자열을 잇는 힘수
 	string2 += "Cafe";
 	cout << string2 << endl;
 
-	// strcpy() : 문자열 복사
+ // strcpy() : 문자열 복사
 	string1 = string2;
 
 	cout << string2 << endl;
 
-	// 문자열의 숫자를 해당 자료형으로 변환
+ // 문자열의 숫자를 해당 자료형으로 변환
 	string intString = "1000";
 	int myInt = stoi(intString);
 
-	// 입력
+ // 입력
 	string InputString;
 
 	cin >> InputString;
@@ -83,10 +68,34 @@ int main()
 	// to_string() : 숫자 자료형을 문자 자료형으로 변환
 	string changeString = to_string(StringInt);
 
-	// 문자열 비교
+ // 문자열 비교
 	if (string1 == string2) cout << "SAME!" << endl;
 
 	printString(string1);
+
+*/
+
+#pragma warning(disable : 4996)
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int main()
+{
+	string Job;
+	string Lv;
+	cout << "전직을 입력해 주세요 : ";
+	cin >> Job;
+	cout << "레벨을 입력해 주세요 : ";
+	cin >> Lv;
+
+	int doubleLv = stoi(Lv);
+
+	cout << "입력받은 문자열 길이 : " << Job.length() << endl;
+	cout << "입력받은 문자열 크기 : " << Job.capacity() << endl;
+
+	cout << "Lv" << Lv << " " << Job << endl;
 
 	return 0;
 }

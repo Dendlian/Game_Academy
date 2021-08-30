@@ -54,15 +54,20 @@
    - 문자열의 숫자를 해당 자료형으로 변환
 		string intString = "1000";
 		int myInt = stoi(intString);
+		
+		stoi = string to int
+		stof = string to float
+		stol = string to long
+		stod = string to double
 
    - 입력
 		string InputString;
 		cin >> InputString;
 		cout << "입력값 : " << InputString << endl;
-
 		int StringInt = 100;
+
    - double, char, longlong, float 모두 동일
-   - to_string() : 숫자 자료형을 문자 자료형으로 변환
+		to_string() : 숫자 자료형을 문자 자료형으로 변환
 		string changeString = to_string(StringInt);
 
    - 문자열 비교

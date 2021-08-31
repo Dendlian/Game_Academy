@@ -44,7 +44,7 @@ int main()
 	int num1 = 100;
 	int num2 = 200;
  
-	// myNumber1에 대한 참조자 ref1을 선언
+	// num1에 대한 참조자 ref1을 선언
 	int& ref1 = num1;
 	// & : 참조 연산자 O, 주소 연산자 X
 	// 주소를 대입하는 포인터와 다르게 변수 이름을 대입

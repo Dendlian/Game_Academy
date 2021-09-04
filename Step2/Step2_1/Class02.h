@@ -14,7 +14,7 @@ public:
 
 	FORCEINLINE int GetVariable() const
 	{
-		return Variable;
+		return Variable; 
 	}
 
 };

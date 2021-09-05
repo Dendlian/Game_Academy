@@ -24,6 +24,14 @@ public :
 	// 소멸자 
 	~Class02();
 	// 매개 변수 사용 불가능
+
+	// 복사 생성자
+	// 대입된 같은 형태의 객체 속 맴버가 가진 값을 자신의 맴버로 복사하는 생성자
+
+	// 기본 복사 생성자 : C++에서 기본적으로 제공해주는 복사 생성자
+	  - Monster monster2 = Monster(monster1);
+      - Monster monster2 = monster1;
+
 */
 
 #include"Class02.h"

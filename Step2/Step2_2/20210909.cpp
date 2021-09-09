@@ -12,7 +12,6 @@ int main()
 
 	((Warrior*)warrior)->PrintInfo();
 	((Warrior*)warrior)->Attack();
-
 	// () : C언어에서부터 제공하는 기본적인 캐스팅 연산자
 	// 자유자재로 캐스팅이 가능하며 서로 다른 형식간의 변환도 가능
 	// ex) const char *str = "string"
@@ -25,7 +24,6 @@ int main()
 	//		static_cast<int*>(str);		-Error-
 
 	static_cast<Warrior*>(warrior)->PrintInfo();
-
 
 	delete warrior;
 	warrior = nullptr;

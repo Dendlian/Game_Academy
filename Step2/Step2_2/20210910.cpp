@@ -44,11 +44,12 @@ int main()
 {
 	Child child;
 	child.SampleMethod();
+
 	// 자식의 메소드안에 부모의 메소드 호출
 
 	// 기반 클래스 형식으로 파생클래스 참조
-	Parent* sampleClass = new Child;
-	sampleClass->SampleMethod();
+	 Parent* sampleClass = new Child;
+	 sampleClass->SampleMethod();
 
 	delete sampleClass;
 	sampleClass = nullptr;

@@ -3,6 +3,7 @@
 String::String()
 {
 	Str = nullptr;
+	size = 0;
 	len = 0;
 }
 
@@ -10,17 +11,14 @@ String::String(const char* str)
 {
 	size = sizeof(str);
 	len = strlen(str);
+	Str = new char[ +1];
 	strcpy(Str, str);
 }
 
-int String::length()
-{
-	len = strlen(Str);
-	return len;
-}
+//String::~String()
+//{
+//	delete[] Str;
+//	Str = nullptr;
+//}
 
-int String::capactity()
-{
-	size = sizeof(Str);
-	return size;
-}
+

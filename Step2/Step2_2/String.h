@@ -11,7 +11,6 @@ class String
 public:
 	char *Str;		// 1. 문자열 주소를 가리킬 포인터로 설정하여 외부에서 바꿔도 클래스 내에서도 바뀐 값을 유지 
 	int len;		// 2. 문자열의 길이
-	int size;		// 3. 문자열의 크기 (용량)
 
 	String();						// 4. 생성자
 	String(const char* str);		// 5. 생성자 오버로딩
@@ -25,11 +24,12 @@ public:
 
 	FORCEINLINE int Capactity()		// 7. 용량을 구하는 메서드
 	{
-		return size;
+		return sizeof(Str);
 	}
 
 
 #pragma region 연산자 오버로딩
+
 
 	FORCEINLINE String operator=(const char* value) // String str1 = "abcd"
 	{
@@ -52,5 +52,21 @@ public:
 	{
 		return strcmp(Str, value.Str);	// 13. int형으로 연산자 오버로딩을 설정하고 문자열 비교(strcmp)를 이용하여 반환
 	}
+
+	friend ostream& operator<<(ostream& os, const String& value)
+	{
+		os << value.Str;	// 14. 출력연산자 : friend를 통해 ostream의 private에 접근하여 << 뒤에 문자열을 출력하게끔 Str을 반환
+		return os;
+	}
+
+	
+	char operator[](int index) // str1[0]
+	{
+		if (index >= 0 && index <= len)		// 15. 인덱스 연산자를 선언하면 문자를 출력하게끔 Str의 인덱스를 반환
+			return Str[index];
+	}
+
+
 #pragma endregion	
 };
+

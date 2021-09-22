@@ -21,5 +21,9 @@ int main()
 	
 	cout << str1.GetLength() << endl;
 	cout << str1.Capactity() << endl;
+	
+	cout << str1[3] << endl;
+	cout << str1.Str[3] << endl;
 
+	return 0;
 }

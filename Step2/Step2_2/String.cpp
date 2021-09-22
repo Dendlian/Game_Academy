@@ -3,15 +3,13 @@
 String::String()
 {
 	Str = nullptr;
-	size = 0;
 	len = 0;
 }
 
 String::String(const char* str)
 {
-	size = sizeof(str);
 	len = strlen(str);
-	Str = new char[ +1];
+	Str = new char[len];
 	strcpy(Str, str);
 }
 

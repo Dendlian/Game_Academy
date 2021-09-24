@@ -15,8 +15,11 @@ String::String(const char* str)
 
 //String::~String()
 //{
-//	delete[] Str;
-//	Str = nullptr;
+//	if (Str != nullptr) 
+//	{
+//		delete[] Str;
+//		Str = nullptr;
+//	}
 //}
 
 

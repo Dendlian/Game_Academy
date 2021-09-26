@@ -6,10 +6,10 @@ int main()
 	
 	cout << Store.GetPlay() << endl;
 
-	while (Store.GetPlay())
+	while (Store.GetPlay()) 
 	{
-		Store.Select_Menu();
+		Store.Select_Menu(); 
 	}
-	
+	 
 	return 0;
 }

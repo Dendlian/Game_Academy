@@ -9,7 +9,7 @@ int main()
 	while (Store.GetPlay()) 
 	{
 		Store.Select_Menu(); 
-	}
+	}     
 	 
 	return 0;
 }

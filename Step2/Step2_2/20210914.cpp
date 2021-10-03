@@ -37,5 +37,7 @@ int main()
 	SampleAbstractClass* sample = new SampleClass();
 	sample->Print();
 
+	delete sample;
+	sample = nullptr;
 	return 0;
 }

@@ -21,7 +21,7 @@ int main()
 	// C++에서부터 제공하는 캐스팅 연산자
 	// 논리적으로 변환 가능한 타입에 대한 캐스팅만 허용
 	// ex) const char *str = "string"
-	//		static_cast<int*>(str);		-Error-
+	//	    static_cast<int*>(str);		-Error-
 
 	static_cast<Warrior*>(warrior)->PrintInfo();
 
@@ -30,3 +30,13 @@ int main()
 
 	return 0;
 }
+
+/*
+==Note==
+Static_cast : 논리적으로 변경 가능한 경우에 변경을 허용해주는 기능을 하는 연산자
+Dynamin_cast : 클래스 다형성, 상속성을 기반으로 부모 클래스에서 자식 클래스로 참조형 데이터 및 포인터를 변환하는 것까지 허용하지 않는 연산자
+
+static은 자식->부모, 부모->자식 모두 아무런 조건없이 형변환시켜주지만 그에 대한 책임은 프로그래머의 몫
+
+Dynamub은 자식->부모의 형변환만 허용
+*/

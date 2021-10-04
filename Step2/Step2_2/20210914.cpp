@@ -22,8 +22,8 @@ public:
 	virtual void Print() =0;
 	// 가상함수 뒤에 '=0'을 붙혀서 선언
 };
-
-class SampleClass : public SampleAbstractClass
+// 클래스 뒤 final : 이후 상속 금지
+class SampleClass final : public SampleAbstractClass
 {
 public:
 	virtual void Print() override

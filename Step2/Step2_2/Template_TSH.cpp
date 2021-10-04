@@ -4,7 +4,6 @@ using namespace std;
 // 함수 템플릿 특수화
 /// - 특수한 자료형에 대해 다른 처리를 하는 것을 의미
 
-
 template<typename T>
 T Add(T a, T b)
 { return a + b; }

@@ -3,7 +3,6 @@
  // List
    - 시퀀스 컨테이너
    - 요소의 삽입 / 제거가 빠르며 탐색 속도 : Low
-
 */
 
 #include<iostream>

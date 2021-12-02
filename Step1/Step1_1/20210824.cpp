@@ -19,7 +19,7 @@
    - 2. 인접한 두 개의 요소를 비교하여 크기가 큰 순서대로 되어있지 않으면 서로 교환
 
   */
- 
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

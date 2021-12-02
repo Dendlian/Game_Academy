@@ -29,7 +29,7 @@ public :
 	// 대입된 같은 형태의 객체 속 맴버가 가진 값을 자신의 맴버로 복사하는 생성자
 	  - char*는 메모리의 주소값을 참조하여 실제의 값을 담는 변수
 	  - 기본 복사생성자를 이용하여 복사하면 같은 주소를 저장하여 객체가 다르지만 동시에 값이 변경되는 오류 발생
-	  - 동적할당을 통해 공간을 따로 생성하여 오류 방지
+      - 동적할당을 통해 공간을 따로 생성하여 오류 방지
 	Weapon::Weapon(const char* name, int atk)
 	{
 		Atk = atk;
@@ -52,7 +52,7 @@ Weapon::~Weapon()
 
 	// 기본 복사 생성자 : C++에서 기본적으로 제공해주는 복사 생성자
 	  - Monster monster2 = Monster(monster1);
-	  - Monster monster2 = monster1;
+      - Monster monster2 = monster1;
 
 
 */
